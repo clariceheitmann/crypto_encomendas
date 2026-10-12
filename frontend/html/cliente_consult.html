@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style_cad.css">
+    <script src="../js/cliente_consult.js" defer></script>
+    <title>Consultar</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="./cliente_cad.html">Cadastro</a>
+            <a href="./cliente_atu.html">Atualizar</a>
+            <a href="./cliente_consult.html">Consultar</a>
+            <a href="./cliente_list.html">Listar</a>
+            <a href="./cliente_apag.html">Excluir</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Consultar Cliente</h1><br>
+
+        <section>
+            <h2>Consultar por ID</h2>
+
+            <form>
+                <label for="codCliente">ID do Cliente</label>
+                <input type="number" id="codCliente"><br><br>
+
+                <button id="btn_consult">Consultar por ID</button><br><br>
+            </form>
+        </section>
+
+        <br>
+
+        <section>
+            <h2>Consultar por Nome</h2>
+
+            <form>
+                <label for="nome">Nome do Cliente</label>
+                <input type="text" id="nome"><br><br>
+
+                <button id="btn_consult_nome">Consultar por Nome</button>
+            </form>
+        </section>
+
+        <br>
+
+        <div id="res_consult_cliente"></div>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style_cad.css">
+    <script src="../js/encomenda_cad.js" defer></script>
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="./encomenda_cad.html">Cadastro</a>
+            <a href="./encomenda_list.html">Listar</a>
+            <a href="./encomenda_atu.html">Atualizar Status</a>
+
+        </nav>
+    </header>
+    <main>
+        <h1>Cadastrar Encomenda</h1>
+        <form>
+
+            <form>
+                <label for="codCliente">ID do Cliente</label>
+                <input type="number" id="codCliente" required><br><br>
+
+                <label for="codCarga">ID da Carga</label>
+                <input type="number" id="codCarga" required><br><br>
+
+                <label for="statusAtual">Status Atual</label>
+                <select id="statusAtual" required>
+                    <option value="TRANSITO">Em Trânsito</option>
+                    <option value="SAIU_ENTREGA">Saiu para Entrega</option>
+                    <option value="ENTREGUE">Entregue</option>
+                </select><br><br>
+
+                <label for="data">Data</label>
+                <input type="date" id="data" required><br><br>
+
+                <button id="btn_cad">Cadastrar</button>
+            </form>
+
+            <br><br>
+            <div id="res_cad_encomenda"></div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+### 1. Testar cadastro de cpf errado 
+POST http://localhost:3000/cliente
+Content-Type: application/json
+
+{
+    "nome": "Roberto",
+    "email": "roberto@gmail.com",
+    "senha": "abc",
+    "cpf": "123456789",
+    "telefone": "47912345678"
+}
+
+### 2. Testar cadastro do cliente
+POST http://localhost:3000/cliente
+Content-Type: application/json
+
+{
+    "nome": "Roberto",
+    "email": "roberto@gmail.com",
+    "senha": "abc",
+    "cpf": "12345678912",
+    "telefone": "47912345678"
+}
+
+### 3. Testar cadastro do cliente 2
+POST http://localhost:3000/cliente
+Content-Type: application/json
+
+{
+    "nome": "Bruno",
+    "email": "bruno@gmail.com",
+    "senha": "def",
+    "cpf": "98765432198",
+    "telefone": "47987654321"
+}
+
+### 4. Testar login
+# @name loginReq
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email": "bruno@gmail.com",
+    "senha": "def"
+}
+
+### 5. Consultar clientepor ID
+GET http://localhost:3000/cliente/1
+Authorization: {{loginReq.response.body.token}}
+
+### 6. Consultar clientepor nome
+GET http://localhost:3000/cliente/buscar/Bruno
+Authorization: {{loginReq.response.body.token}}
+
+### 6. Listar clientes GET 
+GET http://localhost:3000/clientes
+Authorization: {{loginReq.response.body.token}}
+
+### 6. Excluir clientes
+DELETE  http://localhost:3000/cliente/1
+Authorization: {{loginReq.response.body.token}}
+
+

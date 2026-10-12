@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style_cad.css">
+    <script src="../js/carga_cad.js"defer></script>
+    <title>Cadastro</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="./carga_cad.html">Cadastro</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Cadastrar Carga</h1>
+        <form>
+            <label for="idCliente">ID do Cliente</label>
+            <input type="text" id="idCliente"><br><br>
+
+            <label for="descricao">Descrição</label>
+            <input type="text" id="descricao"><br><br>
+
+            <label for="peso">Peso</label>
+            <input type="text" id="peso"><br><br>
+
+            <label for="codigoRastreio">Código do Rastreio</label>
+            <input type="text" id="codigoRastreio"><br><br>
+
+            <button id="btn_cad">Cadastrar</button>
+        </form>
+        <br><br>
+        <div id="res_cad_carga"></div>
+    </main>
+</body>
+</html>
